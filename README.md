@@ -34,13 +34,13 @@ yarn add -D node-sass
 
 CSS Modules を使用するには、 .css または .scss に
 
-```
+```CSS
 .btn { ... }
 ```
 
 のようにクラスのスタイルを定義し、 .jsx で次のように読み込む。
 
-```
+```JSX
 import React from 'react'
 import styles from './LikeButton.module.scss'
 // 次のようにすると Rollup がうまくいかない
