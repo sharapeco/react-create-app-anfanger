@@ -1,8 +1,9 @@
-# React-create Anfänger
+# React-create-app Anfänger
 
 ## 目標
 
-create-react-app を使用して React 単一ページアプリケーションのビルドを行う。
+React を使用してライブラリを作る。
+ビルド環境は create-react-app をベースにする。
 
 
 ## セットアップ
@@ -73,7 +74,7 @@ yarn add --dev npm-run-all uglify-es postcss-cli cssnano
 
 PostCSS は Rollup でも使われるため、 minify 用の設定は conf-release/postcss.config.js に配置して次のようにした。
 
-``
+```
 postcss --verbose --config conf-release -o build/package/anfanger.min.css build/package/anfanger.css
 ```
 
