@@ -1,0 +1,16 @@
+$btn-face: #1c65ad;
+
+.btn {
+	box-sizing: border-box;
+	padding: .5em .75em;
+	color: #fff;
+	background: $btn-face;
+	border: none;
+	border-radius: .25em;
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		background: darken($color: $btn-face, $amount: 10)
+	}
+}

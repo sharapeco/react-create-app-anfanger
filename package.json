@@ -1,0 +1,59 @@
+{
+  "name": "react-create-anfanger",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "run-s build:rollup build:minifyjs build:minifycss",
+    "build:rollup": "rollup -c --environment BUILD:production",
+    "build:minifyjs": "uglifyjs --compress --mangle --output build/package/anfanger.min.js build/package/anfanger.js",
+    "build:minifycss": "postcss --verbose --config conf-release -o build/package/anfanger.min.css build/package/anfanger.css",
+    "build:orig": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "babel-preset-react": "^6.24.1",
+    "cssnano": "^4.1.10",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.4",
+    "eslint-plugin-standard": "^4.0.1",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.1",
+    "rollup": "^2.23.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-postcss": "^3.1.3",
+    "rollup-plugin-scss": "^2.5.0",
+    "rollup-plugin-svg": "^2.0.0",
+    "rollup-plugin-uglify-es": "^0.0.1"
+  }
+}
