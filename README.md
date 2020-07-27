@@ -42,12 +42,14 @@ CSS Modules を使用するには、 .css または .scss に
 
 ```
 import React from 'react'
-import { btn } from './LikeButton.module.scss'
+import styles from './LikeButton.module.scss'
+// 次のようにすると Rollup がうまくいかない
+// import { btn } from './LikeButton.module.scss'
 
 export default class LikeButton extends React.Component {
 	render () {
 		return (
-			<button className={btn}>
+			<button className={styles.btn}>
 				Like
 			</button>
 		)
